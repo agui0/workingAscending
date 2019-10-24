@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    function init() {
+      var cvs = document.getElementById("cvs");
+      var cxt = cvs.getContext("2d");
+      cxt.font = 'bold 20px 黑体';
+      cxt.fillText('画布', 30, 30);
+      cxt.strokeText('画布', 50, 50);
+    }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="cvs"></canvas>
+</body>
+</html>

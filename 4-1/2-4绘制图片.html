@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    function init() {
+      // 获取画布元素
+      var cvs = document.getElementById("cvs");
+      // 获取工具集
+      var cxt = cvs.getContext("2d");
+
+      // 先定义图片对象
+      var img = new Image();
+      img.src = 'http://pic39.nipic.com/20140307/13928177_195158772185_2.jpg';
+      img.onload=function() {
+        // 绘制加载好的图片
+        // cxt.drawImage(this,10,10);
+        // 绘制加载好的指定宽高的图片
+        // cxt.drawImage(this,10,10,600,400);
+        // 绘制加载放大的图片
+        //                 x1,y1,w1,h1, x2,y2,w2,h2
+        cxt.drawImage(this,130,150,700,500,10,10,900,700);
+
+      }
+      
+      
+    }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="cvs" width="1000" height="800" style="border: 1px solid #ccc"></canvas>
+</body>
+</html>

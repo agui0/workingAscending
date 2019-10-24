@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    function init() {
+      var cvs = document.getElementById("cvs");
+      console.log(cvs);
+      var cxt = cvs.getContext("2d");
+      cxt.strokeStyle = 'red';
+      cxt.lineWidth = 5;
+      cxt.moveTo(50,50);
+      cxt.lineTo(150, 50);
+      cxt.lineTo(80, 100);
+      cxt.closePath();
+      cxt.stroke();
+    }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="cvs"></canvas>
+</body>
+</html>
